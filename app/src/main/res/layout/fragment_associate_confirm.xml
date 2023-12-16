@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue">
+
+    <TextView
+        android:id="@+id/textConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/confirm" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="594dp"
+        android:layout_below="@id/textConfirm"
+        android:layout_marginTop="20dp"
+        android:padding="16dp" />
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/updateStockButton"
+        android:text="UPDATE STOCK"
+        android:layout_marginTop="680dp"
+
+        />
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/uploadBtn"
+        android:text="UPLOAD"
+        android:layout_marginTop="730dp"
+
+        />
+
+</RelativeLayout>

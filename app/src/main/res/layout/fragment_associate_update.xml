@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssociateUpdate"
+    android:orientation="vertical"
+    android:background="@color/darkblue">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/update"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update a Stock with a QR Code."
+        android:fontFamily="@font/regular"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="100dp"
+        />
+
+    <Button
+        android:id="@+id/scanQrCodeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan QR Code"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="130dp"
+        android:onClick="scanQrCode"/>
+
+    <TextView
+        android:id="@+id/scannedQrCodeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Scanned QR Code"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="360dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/bold"
+        android:layout_marginEnd="20dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_curved"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+</FrameLayout>

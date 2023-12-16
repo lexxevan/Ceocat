@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminProfile"
+    android:background="#6B4758"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="740dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/curved_top2" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="5dp"
+        android:background="@drawable/lineadmin"
+        android:layout_marginTop="320dp"
+        android:layout_marginStart="45dp"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="105dp"
+        android:background="@drawable/adminpicture"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROFILE"
+        android:fontFamily="@font/bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="120dp">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/adminLogout"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/logoutbtn"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bolditalic"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="350dp"
+
+        />
+    <TextView
+        android:id="@+id/adminEmailAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:textSize="10sp"
+        android:layout_marginTop="355dp"
+        android:fontFamily="@font/regular"
+        android:text="Account"
+        android:maxLines="1"
+        android:textColor="@color/white"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name:"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bolditalic"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="380dp"
+
+        />
+
+    <TextView
+        android:id="@+id/adminFullname"
+        android:layout_width="wrap_content"
+        android:textSize="10sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="385dp"
+        android:fontFamily="@font/regular"
+        android:text="Full Name"
+        android:textColor="@color/white"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department:"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bolditalic"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="410dp"
+
+        />
+
+    <TextView
+        android:id="@+id/adminDepartment"
+        android:layout_width="wrap_content"
+        android:textSize="10sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="415dp"
+        android:fontFamily="@font/regular"
+        android:text="Department"
+        android:textColor="@color/white"
+
+        />
+</FrameLayout>

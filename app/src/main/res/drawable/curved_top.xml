@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/darkblue" /> <!-- Set your desired background color -->
+            <corners android:topLeftRadius="200dp" android:topRightRadius="200dp" /> <!-- Adjust the radius to control the rounded top corners -->
+        </shape>
+    </item>
+    <item android:top="50dp"> <!-- Adjust the value to control the height of the oval -->
+        <shape android:shape="rectangle">
+            <solid android:color="@color/darkblue" /> <!-- Set the same color as the background color above -->
+        </shape>
+    </item>
+
+</layer-list>

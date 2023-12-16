@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "455735066466",
+    "firebase_url": "https://ceocat-910da-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ceocat-910da",
+    "storage_bucket": "ceocat-910da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455735066466:android:a58cb6871751c3aab9f63b",
+        "android_client_info": {
+          "package_name": "com.sauerkrauts.group.ceocat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQeM_f6NJH-3kmESwXJW5nwxEJi8zxeYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
