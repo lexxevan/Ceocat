@@ -1,64 +1,135 @@
-package com.sauerkrauts.group.ceocat;
-
+package com.sauerkrauts.group.ceocat;// AdminInput.java
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AdminInput#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class AdminInput extends Fragment {
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+import com.sauerkrauts.group.ceocat.referenceclasses.OrderedProduct;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+import java.util.ArrayList;
+import java.util.List;
 
-    public AdminInput() {
-        // Required empty public constructor
-    }
+// AdminInput.java
+public class AdminInput extends Fragment implements OrderedProductAdapter.OrderedProductClickListener {
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AdminInput.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AdminInput newInstance(String param1, String param2) {
-        AdminInput fragment = new AdminInput();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private List<OrderedProduct> orderedProducts = new ArrayList<>();
+    private OrderedProductAdapter adapter;
+    private OrderedProductViewModel orderedProductViewModel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        orderedProductViewModel = new ViewModelProvider(this).get(OrderedProductViewModel.class);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_admin_input, container, false);
+        View view = inflater.inflate(R.layout.fragment_admin_input, container, false);
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        adapter = new OrderedProductAdapter(orderedProducts, this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+        recyclerView.setAdapter(adapter);
+
+        Button btnOrderStock = view.findViewById(R.id.btnOrderStock);
+        btnOrderStock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showOrderDialog();
+            }
+        });
+
+        // Observe the LiveData in the ViewModel
+        orderedProductViewModel.getOrderedProductsLiveData().observe(getViewLifecycleOwner(), new Observer<List<OrderedProduct>>() {
+            @Override
+            public void onChanged(List<OrderedProduct> products) {
+                // Update the adapter with the new data
+                orderedProducts.clear();
+                orderedProducts.addAll(products);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+        return view;
+    }
+
+    private void showOrderDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_order_stock, null);
+        builder.setView(dialogView);
+
+        final EditText etProductName = dialogView.findViewById(R.id.etProductName);
+        final EditText etManufacturer = dialogView.findViewById(R.id.etManufacturer);
+        final EditText etQuantity = dialogView.findViewById(R.id.etQuantity);
+
+        builder.setPositiveButton("Order", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String productName = etProductName.getText().toString();
+                String manufacturer = etManufacturer.getText().toString();
+                String quantity = etQuantity.getText().toString();
+
+                addOrderedProduct(productName, manufacturer, quantity);
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
+    }
+
+    private void addOrderedProduct(String productName, String manufacturer, String quantity) {
+        OrderedProduct orderedProduct = new OrderedProduct(productName, manufacturer, quantity);
+        orderedProducts.add(orderedProduct);
+        adapter.notifyDataSetChanged();
+
+        orderedProductViewModel.addOrderedProduct(orderedProduct);
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        OrderedProduct selectedProduct = orderedProducts.get(position);
+        showDetailedView(selectedProduct);
+    }
+
+    private void showDetailedView(OrderedProduct selectedProduct) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_detailed_view, null);
+        builder.setView(dialogView);
+
+        TextView tvProductName = dialogView.findViewById(R.id.tvDetailedProductName);
+        TextView tvManufacturer = dialogView.findViewById(R.id.tvDetailedManufacturer);
+        TextView tvQuantity = dialogView.findViewById(R.id.tvDetailedQuantity);
+
+        tvProductName.setText(selectedProduct.getProductName());
+        tvManufacturer.setText(selectedProduct.getManufacturer());
+        tvQuantity.setText(selectedProduct.getQuantity());
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
     }
 }
+

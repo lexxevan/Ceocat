@@ -6,14 +6,38 @@
     tools:context=".AdminInput"
     android:background="@color/winered">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:fontFamily="@font/bold"
-        android:textColor="@color/white"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:text="INPUT" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="INPUT" />
+
+        <!-- Add RecyclerView to display ordered products -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnOrderStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Order a Stock" />
+
+    </LinearLayout>
 
 </FrameLayout>
