@@ -5,18 +5,18 @@
         android:id="@+id/updateAssc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/admin_home"
+        android:icon="@drawable/catupdate"
         android:title="Update" />
     <item
         android:id="@+id/confirmAssc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/admin_input"
+        android:icon="@drawable/catconfirm"
         android:title="Confirm" />
     <item
         android:id="@+id/profileAssc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/admin_profile"
+        android:icon="@drawable/catprofile"
         android:title="Profile" />
 </menu>

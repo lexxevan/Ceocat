@@ -8,18 +8,21 @@
     <EditText
         android:id="@+id/etProductName"
         android:layout_width="match_parent"
+        android:fontFamily="@font/regular"
         android:layout_height="wrap_content"
         android:hint="Product Name"/>
 
     <EditText
         android:id="@+id/etManufacturer"
         android:layout_width="match_parent"
+        android:fontFamily="@font/regular"
         android:layout_height="wrap_content"
         android:hint="Manufacturer"/>
 
     <EditText
         android:id="@+id/etQuantity"
         android:layout_width="match_parent"
+        android:fontFamily="@font/regular"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:hint="Quantity"/>

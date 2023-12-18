@@ -15,31 +15,50 @@
         android:layout_marginTop="20dp"
         android:text="@string/confirm" />
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/rectanglecurved4"
+
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_height="594dp"
         android:layout_below="@id/textConfirm"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="190dp"
         android:padding="16dp" />
-    <Button
+
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:fontFamily="@font/black"
         android:id="@+id/updateStockButton"
+        android:background="@drawable/rectangle_curved6"
         android:text="UPDATE STOCK"
-        android:layout_marginTop="680dp"
+        android:layout_marginTop="635dp"
 
         />
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:fontFamily="@font/black"
+        android:background="@drawable/rectangle_curved6"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:id="@+id/uploadBtn"
         android:text="UPLOAD"
-        android:layout_marginTop="730dp"
+        android:layout_marginTop="700dp"
 
         />
 

@@ -4,7 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminInput"
-    android:background="@color/winered">
+    android:background="@drawable/bgadminiput2">
+
+    <View
+        android:layout_width="340dp"
+        android:layout_height="540dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="136dp"
+        android:background="@drawable/rectangle_curved3"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,28 +23,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="25dp"
             android:fontFamily="@font/bold"
+            android:text="INPUT"
             android:textColor="@color/white"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:text="INPUT" />
+            android:textSize="30sp" />
 
         <!-- Add RecyclerView to display ordered products -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnOrderStock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:text="Order a Stock" />
+            android:background="@drawable/button_with_stroke2"
+            android:fontFamily="@font/scregular"
+            android:text="Order a Stock"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

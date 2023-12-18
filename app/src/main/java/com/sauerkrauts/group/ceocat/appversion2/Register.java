@@ -48,8 +48,8 @@ public class Register extends AppCompatActivity {
         final Button backbutton = findViewById(R.id.registerBackButton);
 
         // Set up an adapter for the spinner with two items: Admin and Associate
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.user_types, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.user_types, R.layout.custom_spinner_layout);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         userTypeSpinner.setAdapter(adapter);
 
         // Set a listener to handle the selected item in the Spinner

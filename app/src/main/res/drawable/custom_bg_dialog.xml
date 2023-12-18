@@ -1,0 +1,5 @@
+<!-- res/drawable/dialog_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/white" /> <!-- Set the background color -->
+    <corners android:radius="100dp" /> <!-- Adjust the radius for the curved edges -->
+</shape>

@@ -9,7 +9,8 @@
 
     <View
         android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_width="380dp"
         android:layout_height="85dp"
         android:background="@drawable/rectangle_curved"
@@ -24,13 +25,14 @@
         android:background="@drawable/curved_top"
 
         />
+
     <ImageView
-    android:layout_width="200dp"
-    android:layout_height="200dp"
-    android:layout_marginTop="100dp"
-    android:layout_marginStart="105dp"
-    android:background="@drawable/associatepicture"
-    />
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/associatepicture" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,8 +47,8 @@
 
     <ImageView
         android:id="@+id/asscLogout"
-        android:layout_width="13dp"
-        android:layout_height="16dp"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
         android:layout_marginStart="340dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/logoutbtn"
@@ -54,25 +56,38 @@
         android:textColor="@color/black"
         android:textSize="10sp" />
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="520dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectanglecurved4"
+
+        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:textSize="17sp"
+        android:layout_marginTop="430dp"
+        android:fontFamily="@font/bolditalic"
         android:text="Email:"
         android:textColor="@color/white"
-        android:fontFamily="@font/bolditalic"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="350dp"
 
         />
+
     <TextView
         android:id="@+id/asscEmailAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="170dp"
-        android:textSize="10sp"
-        android:layout_marginTop="355dp"
+        android:textSize="12sp"
+        android:layout_marginTop="435dp"
         android:fontFamily="@font/regular"
-        android:text="Account"
+
         android:maxLines="1"
         android:textColor="@color/white"
 
@@ -82,22 +97,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Full Name:"
+        android:textSize="17sp"
         android:textColor="@color/white"
         android:fontFamily="@font/bolditalic"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="460dp"
 
         />
 
     <TextView
         android:id="@+id/asscFullname"
         android:layout_width="wrap_content"
-        android:textSize="10sp"
+        android:textSize="13sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="385dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="465dp"
         android:fontFamily="@font/regular"
-        android:text="Full Name"
         android:textColor="@color/white"
 
         />
@@ -106,22 +121,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Warehouse #"
+        android:textSize="17sp"
         android:textColor="@color/white"
         android:fontFamily="@font/bolditalic"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="490dp"
 
         />
 
     <TextView
         android:id="@+id/asscWarehouseNumber"
         android:layout_width="wrap_content"
-        android:textSize="10sp"
+        android:textSize="13sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="210dp"
-        android:layout_marginTop="415dp"
+        android:layout_marginTop="495dp"
         android:fontFamily="@font/regular"
-        android:text="Warehouse #"
         android:textColor="@color/white"
 
         />

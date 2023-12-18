@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@color/darkpurple"
+    android:background="@drawable/bgregister2"
     tools:context=".appversion2.Register">
 
     <Button
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:background="@drawable/baseline_arrow_back_ios_24"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="40dp"
         android:id="@+id/registerBackButton"
         android:layout_marginTop="20dp"
         />
@@ -20,111 +20,73 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ACCOUNT REGISTER"
-        android:textSize="17sp"
-        android:textColor="@color/white"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/scblack"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Full Name"
-        android:textSize="10sp"
+        android:layout_gravity="center"
+        android:text="SIGN UP"
         android:textColor="@color/white"
-        android:fontFamily="@font/regular"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+
         />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="35dp"
         android:id="@+id/fullName"
         android:maxLines="1"
+        android:hint="Full Name"
+        android:fontFamily="@font/regular"
         android:textSize="12sp"
         android:inputType="textEmailAddress"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
         android:background="@drawable/rectangle_curved"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email_address"
-        android:textSize="10sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/regular"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        />
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="35dp"
         android:id="@+id/emailAddress"
         android:maxLines="1"
         android:textSize="12sp"
+        android:hint="Email"
+        android:fontFamily="@font/regular"
+        android:layout_gravity="center"
         android:inputType="textEmailAddress"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
         android:background="@drawable/rectangle_curved"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/password"
-        android:textSize="10sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/regular"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="35dp"
         android:id="@+id/password"
         android:maxLines="1"
+        android:layout_gravity="center"
         android:textSize="12sp"
         android:inputType="textPassword"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:hint="Password"
+        android:fontFamily="@font/regular"
         android:layout_marginTop="20dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
         android:background="@drawable/rectangle_curved"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirm Password"
-        android:textSize="10sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/regular"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        />
-
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="35dp"
         android:id="@+id/confirmPassword"
         android:maxLines="1"
         android:textSize="12sp"
+        android:hint="Confirm Password"
+        android:fontFamily="@font/regular"
         android:inputType="textPassword"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
@@ -134,70 +96,69 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose your Type"
-        android:textSize="10sp"
+        android:text="Choose User Type:"
         android:textColor="@color/white"
-        android:fontFamily="@font/regular"
-        android:layout_marginStart="20dp"
+        android:fontFamily="@font/bold"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
         />
+
     <Spinner
         android:id="@+id/userTypeSpinner"
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="35dp"
-        android:textSize="12sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_curved"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
-        android:background="@drawable/rectangle_curved"
-        android:spinnerMode="dropdown"/>
+        android:spinnerMode="dropdown"
+        android:textSize="12sp" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="61dp"
         android:orientation="vertical">
 
         <!-- Other views go here -->
 
         <EditText
             android:id="@+id/departmentEditText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:maxLines="1"
-            android:textSize="12sp"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_curved"
+            android:fontFamily="@font/regular"
+            android:hint="Enter Department"
             android:inputType="text"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"
+            android:maxLines="1"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:hint="Enter Department"
-            android:background="@drawable/rectangle_curved"/>
+            android:textSize="12sp" />
 
         <EditText
             android:id="@+id/warehouseEditText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:maxLines="1"
-            android:textSize="12sp"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_curved"
+            android:hint="Enter Warehouse #"
             android:inputType="number"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"
+            android:maxLines="1"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:hint="Enter Warehouse #"
-            android:background="@drawable/rectangle_curved"/>
+            android:textSize="12sp" />
     </FrameLayout>
 
 
-        <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="290dp"
+        <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+        android:background="@drawable/rectangle_curved5"
         android:id="@+id/registerButton"
         android:textSize="12sp"
         android:textColor="@color/white"
@@ -211,13 +172,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="30dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already have an account?"
             android:textColor="@color/white"
+            android:textSize="10sp"
             android:fontFamily="@font/black"
 
             />
@@ -225,6 +187,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="10sp"
             android:text="Login Now!"
             android:fontFamily="@font/blackitalic"
             android:layout_marginStart="3dp"
