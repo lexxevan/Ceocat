@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat;
+package com.sauerkrauts.group.ceocat.User;
 
 import android.util.Log;
 
@@ -13,7 +13,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.sauerkrauts.group.ceocat.referenceclasses.User;
 
 public class UserViewModel extends ViewModel {
 

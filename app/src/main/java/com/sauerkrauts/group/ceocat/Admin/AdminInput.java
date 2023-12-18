@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat;// AdminInput.java
+package com.sauerkrauts.group.ceocat.Admin;// AdminInput.java
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,6 +15,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.sauerkrauts.group.ceocat.Product.OrderedProductAdapter;
+import com.sauerkrauts.group.ceocat.Product.OrderedProductViewModel;
+import com.sauerkrauts.group.ceocat.R;
 import com.sauerkrauts.group.ceocat.referenceclasses.OrderedProduct;
 
 import java.util.ArrayList;

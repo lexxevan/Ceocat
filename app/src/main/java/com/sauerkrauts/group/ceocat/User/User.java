@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat.referenceclasses;
+package com.sauerkrauts.group.ceocat.User;
 
 public class User {
     private String userId;

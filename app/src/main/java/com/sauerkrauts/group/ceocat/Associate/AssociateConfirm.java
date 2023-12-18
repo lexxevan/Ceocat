@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat;
+package com.sauerkrauts.group.ceocat.Associate;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -22,6 +22,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.sauerkrauts.group.ceocat.Product.ProductAdapter;
+import com.sauerkrauts.group.ceocat.Product.ProductDetailsDialog;
+import com.sauerkrauts.group.ceocat.Product.ProductViewModel;
+import com.sauerkrauts.group.ceocat.R;
+import com.sauerkrauts.group.ceocat.User.UserViewModel;
 import com.sauerkrauts.group.ceocat.referenceclasses.Product;
 
 import java.util.ArrayList;

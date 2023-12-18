@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".appversion2.Login"
+    tools:context=".loginclasses.Login"
     android:layout_gravity="center"
     android:background="@drawable/backgroundlogin2">
     <Button

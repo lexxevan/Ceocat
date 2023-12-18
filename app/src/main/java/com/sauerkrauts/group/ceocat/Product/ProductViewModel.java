@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat;
+package com.sauerkrauts.group.ceocat.Product;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

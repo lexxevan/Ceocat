@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.sauerkrauts.group.ceocat.AdminHome;
+import com.sauerkrauts.group.ceocat.Admin.AdminHome;
 import com.sauerkrauts.group.ceocat.referenceclasses.ProductInfo;
 import java.util.List;
 

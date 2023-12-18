@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat;
+package com.sauerkrauts.group.ceocat.Associate;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,9 +19,9 @@ import androidx.fragment.app.Fragment;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.sauerkrauts.group.ceocat.Product.ProductViewModel;
+import com.sauerkrauts.group.ceocat.R;
 import com.sauerkrauts.group.ceocat.referenceclasses.Product;
-
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;

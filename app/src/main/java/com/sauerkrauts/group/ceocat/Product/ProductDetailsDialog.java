@@ -1,26 +1,20 @@
-package com.sauerkrauts.group.ceocat;
+package com.sauerkrauts.group.ceocat.Product;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import com.bumptech.glide.Glide;
+import com.sauerkrauts.group.ceocat.R;
 import com.sauerkrauts.group.ceocat.referenceclasses.Product;
-
-import org.w3c.dom.Text;
 
 public class ProductDetailsDialog extends DialogFragment {
 

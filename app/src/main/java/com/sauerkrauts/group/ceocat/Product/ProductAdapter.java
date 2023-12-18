@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat;// ProductAdapter.java
+package com.sauerkrauts.group.ceocat.Product;// ProductAdapter.java
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.sauerkrauts.group.ceocat.R;
 import com.sauerkrauts.group.ceocat.referenceclasses.Product;
 
 import java.util.List;

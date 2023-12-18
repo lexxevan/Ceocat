@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat;
+package com.sauerkrauts.group.ceocat.User;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.sauerkrauts.group.ceocat.appversion2.Login;
+import com.sauerkrauts.group.ceocat.R;
+import com.sauerkrauts.group.ceocat.loginclasses.Login;
 
 public class ChooseUser extends AppCompatActivity {
 

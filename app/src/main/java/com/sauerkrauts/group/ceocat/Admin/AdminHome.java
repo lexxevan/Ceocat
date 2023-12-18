@@ -1,6 +1,4 @@
-package com.sauerkrauts.group.ceocat;// AdminHome.java
-import android.app.AlertDialog;
-import android.graphics.Typeface;
+package com.sauerkrauts.group.ceocat.Admin;// AdminHome.java
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +6,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.sauerkrauts.group.ceocat.R;
+import com.sauerkrauts.group.ceocat.RecyclerViewAdapter;
 import com.sauerkrauts.group.ceocat.referenceclasses.ProductInfo;
 import com.squareup.picasso.Picasso;
 

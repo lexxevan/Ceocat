@@ -1,29 +1,26 @@
-package com.sauerkrauts.group.ceocat;
+package com.sauerkrauts.group.ceocat.Main;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-import com.google.firebase.Firebase;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.sauerkrauts.group.ceocat.databinding.ActivityMainBinding;
+import com.sauerkrauts.group.ceocat.Associate.AssociateConfirm;
+import com.sauerkrauts.group.ceocat.Associate.AssociateProfile;
+import com.sauerkrauts.group.ceocat.Associate.AssociateUpdate;
+import com.sauerkrauts.group.ceocat.R;
+import com.sauerkrauts.group.ceocat.databinding.ActivityMain2Binding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+    ActivityMain2Binding binding;
 
     public enum NavigationItem {
-        HOMEPAGE(R.id.homepageadmin),
-        INPUT(R.id.inputAdmin),
-        PROFILE(R.id.profileAdmin);
+        UPDATE(R.id.updateAssc),
+        CONFIRM(R.id.confirmAssc),
+        PROFILE(R.id.profileAssc);
 
         private final int itemId;
 
@@ -42,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             // Return a default item or handle the case accordingly
-            return HOMEPAGE;
+            return UPDATE;
         }
     }
 
@@ -51,37 +48,38 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new AdminHome());
+        replaceFragment(new AssociateUpdate());
 
 
 
-        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+        binding.bottomNavigationView2.setOnItemSelectedListener( item -> {
             int itemId = item.getItemId();
             NavigationItem navigationItem = NavigationItem.fromItemId(itemId);
 
             switch (navigationItem) {
-                case HOMEPAGE:
-                    replaceFragment(new AdminHome());
+                case UPDATE:
+                    replaceFragment(new AssociateUpdate());
                     break;
-                case INPUT:
-                    replaceFragment(new AdminInput());
+                case CONFIRM:
+                    replaceFragment(new AssociateConfirm());
                     break;
                 case PROFILE:
-                    replaceFragment(new AdminProfile());
+                    replaceFragment(new AssociateProfile());
                     break;
             }
 
             return true;
         });
 
+
     }
 
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.replace(R.id.frame_layout2, fragment);
         fragmentTransaction.commit();
     }
 }

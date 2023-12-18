@@ -1,4 +1,4 @@
-package com.sauerkrauts.group.ceocat.appversion2;
+package com.sauerkrauts.group.ceocat.loginclasses;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,9 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.sauerkrauts.group.ceocat.ChooseUser;
-import com.sauerkrauts.group.ceocat.MainActivity;
-import com.sauerkrauts.group.ceocat.MainActivity2;
+import com.sauerkrauts.group.ceocat.User.ChooseUser;
+import com.sauerkrauts.group.ceocat.Main.MainActivity;
+import com.sauerkrauts.group.ceocat.Main.MainActivity2;
 import com.sauerkrauts.group.ceocat.R;
 
 public class Login extends AppCompatActivity {

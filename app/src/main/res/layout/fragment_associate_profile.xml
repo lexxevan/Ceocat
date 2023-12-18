@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AssociateProfile" android:background="@color/finered"
+    tools:context=".Associate.AssociateProfile" android:background="@color/finered"
     android:orientation="vertical"
     android:backgroundTint="@color/whiteblue">
 
